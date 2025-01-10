@@ -1,0 +1,55 @@
+:root{
+    --poppins-font: 'Poppins', sans-serif;
+    --dark-color: #101010;
+    --accent-color: #439A97;
+    --light-color: #fff;
+    --grey-color: #252525;
+}
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.7rem;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-family: var(--poppins-font);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+}
+
+button, 
+input{
+    font-family: inherit;
+    font-size: 1.8rem;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.app{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 3rem 9rem;
+}
+
+@media screen and (max-width: 1000px){
+    .app {
+        padding: 3rem 2rem;
+    }
+}

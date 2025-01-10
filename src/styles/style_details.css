@@ -1,0 +1,99 @@
+/* app header */
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* app body tabs heads */
+.tab-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+.tab-nav-link{
+    font-size: 3rem;
+    color: var(--light-color);
+    padding: 1rem 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.tab-nav-link.active-tab{
+    color: var(--accent-color);
+}
+.tab{
+    display: none;
+}
+
+/* app body content */
+.app-body{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 4rem;
+}
+.app-body-content-thumbnail, 
+.skeleton-thumbnail {
+    width: 100%;
+    border-radius: 2rem;
+}
+.name{
+    text-transform: uppercase;
+    font-size: 3.4rem;
+}
+/* detail tab container */
+.detail-tab-container {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+.detail-tabs{
+    flex: 1 auto;
+}
+/* show-tab */
+.show-tab{
+    display: block;
+}
+
+/* skeleton */
+.skeleton-thumbnail {
+    height: calc(100% / 3 * 4);
+    border-radius: 6px;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+@keyframes skeleton-loading {
+    0% {
+        background-color: #515151;
+    }
+    100% {
+        background-color: #252525;
+    }
+}
+
+/* responsive */
+@media screen and (max-width: 1000px){
+    .head{
+        flex-direction: column;
+    }
+    .name{
+        text-align: center;
+    }
+    .app-body{
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        max-width: 680px;
+        margin: 0 auto 6rem auto;
+    }
+    .tab-nav{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: row;
+        border-radius: 2rem 2rem 0 0;
+        justify-content: space-evenly;
+        background-color: var(--grey-color);
+    }
+}

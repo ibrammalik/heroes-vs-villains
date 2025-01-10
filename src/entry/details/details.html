@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Searh Your Favorite Hero or Villain">
+  <title>Hero VS Villain</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="head">
+      <app-title></app-title>
+      <search-bar></search-bar>
+    </div>
+
+    <div class="app-body">
+      <thumbnail-hero></thumbnail-hero>
+
+      <div class="content-container">
+        <div class="name"></div>
+
+        <div class="detail-tab-container">
+          <div class="tab-nav">
+            <button type="button" class="tab-nav-link" data-id="0">
+              <i class="fa-solid fa-khanda"></i>
+            </button>
+            <button type="button" class="tab-nav-link" data-id="1">
+              <i class="fa-solid fa-dna"></i>
+            </button>
+            <button type="button" class="tab-nav-link" data-id="2">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+            <button type="button" class="tab-nav-link" data-id="3">
+              <i class="fa-solid fa-circle-nodes"></i>
+            </button>
+          </div>
+
+          <div class="detail-tabs">
+            <powerstats-tab></powerstats-tab>
+            <biography-tab></biography-tab>
+            <appearance-tab></appearance-tab>
+            <connections-tab></connections-tab>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
